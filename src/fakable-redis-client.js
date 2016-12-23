@@ -16,7 +16,7 @@ class FakableRedisClient {
     this.password = password;
     this.redisFactory = Redis;
     this.client = undefined;
-    
+
     if (fakeFlg) this.redisFactory = FakeRedis;
 
     // Validation

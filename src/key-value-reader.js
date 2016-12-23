@@ -32,7 +32,7 @@ class KeyValueReader {
 
         processLineNum += !skipFlg ? 1 : 0;
         processFunc(key, value, processLineNum, skipFlg);
-      }).on('pipe', () => { callback(null, processLineNum) });
+      }).on('pipe', () => { callback(null, processLineNum); });
     } catch (e) {
       callback(e);
     }
