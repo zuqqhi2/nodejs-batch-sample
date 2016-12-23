@@ -1,0 +1,36 @@
+{
+  "staging" : {
+    "keyValueFilePath" : "./data/key-value.dat",
+    "redis": {
+      "ip": "stg-sample",
+      "port": 6379,
+      "password": "nodejs",
+      "keyPrefix" : "key-",
+      "expireDay": 1
+    },
+    "alertMail": {
+      "smtpUrl": "smtp://mail.sample.com:25",
+      "from": "from@sample.com",
+      "to": "to@sample.com",
+      "subject": "[STG][ERROR][update-mapping] #{msg} @stg-host",
+      "text": "[Stack Trace]\n #{msg} \n #{stack} \n[Common Trouble Shooting Doc About This Batch]\nhttp://sample-document.com/"
+    }
+  },
+  "production": {
+    "keyValueFilePath" : "./data/key-value.dat",
+    "redis": {
+      "ip": "pro-sample",
+      "port": 6379,
+      "password": "nodejs",
+      "keyPrefix" : "key-",
+      "expireDay": 7
+    },
+    "alertMail": {
+      "smtpUrl": "smtp://mail.sample.com:25",
+      "from": "from@sample.com",
+      "to": "to@sample.com",
+      "subject": "[ERROR][update-mapping] #{msg} @pro-host",
+      "text": "[Stack Trace]\n #{msg} \n #{stack} \n[Common Trouble Shooting Doc About This Batch]\nhttp://sample-document.com/"
+    }
+  }
+}
