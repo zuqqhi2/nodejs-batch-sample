@@ -2,9 +2,9 @@
   "name": "nodejs-batch-sample",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "update-mapping.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/gulp mocha"
   },
   "author": "",
   "license": "ISC",
